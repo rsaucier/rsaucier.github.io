@@ -23,3 +23,29 @@ $$\newcommand{\vect}[1]{\boldsymbol{#1}}
 \newcommand{\cross}{\boldsymbol{\times}}
 \vect{c} = \vect{a} \cdot \vect{b}
 $$,
+```cpp
+Vector c = a ^ b;   // cross product of two vectors
+```
+expresses the vector cross product:
+$$
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\cross}{\boldsymbol{\times}}
+\vect{c} = \vect{a} \cross \vect{b}
+$$,
+and
+```cpp
+Vector c = R * a;   // rotation of a vector
+```
+expresses a rotation of the vector
+$$
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\vect{a}
+$$
+by the rotation operator $$\mathit{R}$$ to give a vector
+$$
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\vect{c}
+$$.
+<!-- A reference sheet for each class is made available in Appendix A and Appendix B. -->
+A [Vector reference sheet][Vector.pdf] as well as a
+[Rotation reference sheet][Rotation.pdf] are also available.
