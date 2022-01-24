@@ -19,8 +19,7 @@ This document describes two C++ classes: a `Vector` class for performing vector 
 Vector c = a * b;   // dot product of two vectors
 ```
 expresses the scalar dot product:
-$$\newcommand{\vect}[1]{\boldsymbol{#1}}
-\newcommand{\cross}{\boldsymbol{\times}}
+$$
 \boldsymbol{c} = \boldsymbol{a} \cdot \boldsymbol{b}
 $$,
 ```cpp
@@ -28,9 +27,7 @@ Vector c = a ^ b;   // cross product of two vectors
 ```
 expresses the vector cross product:
 $$
-\newcommand{\vect}[1]{\boldsymbol{#1}}
-\newcommand{\cross}{\boldsymbol{\times}}
-\vect{c} = \vect{a} \cross \vect{b}
+\boldsymbol{c} = \boldsymbol{a} \boldsymbol{\times} \boldsymbol{b}
 $$,
 and
 ```cpp
@@ -38,13 +35,11 @@ Vector c = R * a;   // rotation of a vector
 ```
 expresses a rotation of the vector
 $$
-\newcommand{\vect}[1]{\boldsymbol{#1}}
-\vect{a}
+\boldsymbol{a}
 $$
 by the rotation operator $$\mathit{R}$$ to give a vector
 $$
-\newcommand{\vect}[1]{\boldsymbol{#1}}
-\vect{c}
+\boldsymbol{c}
 $$.
 <!-- A reference sheet for each class is made available in Appendix A and Appendix B. -->
 A [Vector reference sheet]({% link /assets/Vector.pdf %}) as well as a
@@ -344,3 +339,9 @@ the matrix for this rotation is
 +0.004383	+0.309530	-0.950880
 R = 0.338694 0.929155 0.148182	174.086566
 ```
+
+## Usage
+
+To make use of the Vector class, simply include the `Vector.h` class file,
+and to make use of both the Vector and Rotation classes,
+simply include the `Rotation.h` class file in your C++ program.
