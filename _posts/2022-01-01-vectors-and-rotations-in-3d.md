@@ -49,3 +49,16 @@ $$.
 <!-- A reference sheet for each class is made available in Appendix A and Appendix B. -->
 A [Vector reference sheet]({% link /assets/Vector.pdf %}) as well as a
 [Rotation reference sheet]({% link /assets/Rotation.pdf %}) are also available.
+
+
+
+Rotations only require an axis and an angle of rotation&mdash;which is how they are stored&mdash;and may be specified in a number of convenient ways. We also provide methods for converting from the internal representation to the equivalent quaternion and rotation matrix representation. Quaternion algebra is summarized in Appendix C, which then provides a coordinate-free formula for the rotation of a vector.
+
+It is also useful to describe rotations as a sequence of 3 standard rotations (Euler angles or yaw, pitch, and roll), and Appendix D shows that a rotation sequence about body axes is equivalent to the same rotation sequence applied in reverse order about fixed axes. There are a total of 12 rotation sequences that can be used to describe the orientation of a vector. In Appendix E we provide formulas1 for factoring an arbitrary rotation into each of these rotation sequences.
+Rotations are commonly described with rotation matrices. Appendix F provides formulas and source code for converting between our descriptions of rotations, the quaternion representation, and the rotation matrix.
+
+Quaternions are also very convenient and efficient for describing smooth rotations between 2 different orientations. Appendix G provides a derivation of the spherical linear interpolation (Slerp) formula for this purpose. We also provide a formula and coding for fast incremental Slerp.
+
+Sometimes we need to relate 2 different orientations and find the rotation that will transform from one to the other. This is called the absolute orientation problem and Appendix H provides an exact solution to this problem.
+
+The Rotation and Vector classes provide C++ support for all these operations. No libraries are required and there is nothing to build; one merely needs to include the header file to make use of the class. (The Rotation class includes the Vector class, so one only needs to include `Rotation.h` to also make use of the Vector class.)
