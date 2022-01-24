@@ -21,17 +21,17 @@ Let us transform this formula from a vector equation to a matrix equation.
 Define the matrix operator $$J(\hat{\boldsymbol{n}})$$ as follows.
 
 $$
-\begin{aligned}
+\begin{aligned}[t]
 J(\hat{\boldsymbol{n}} ) \boldsymbol{v} \equiv \hat{\boldsymbol{n}} \boldsymbol{\times} \boldsymbol{v} &= \begin{vmatrix} \hat{\boldsymbol{i}} & \hat{\boldsymbol{j}} & \hat{\boldsymbol{k}} \\ n_1 & n_2 & n_3 \\ v_1 & v_2 & v_3 \end{vmatrix} =
 \hat{\boldsymbol{i}} ( n_2 v_3 - n_3 v_2 ) + \hat{\boldsymbol{j}} ( n_3 v_1 -  n_1 v_3 ) + \hat{\boldsymbol{k}} ( n_1 v_2 - n_2 v_1 ) \\
-&= \begin{bmatrix*}[c] \phantom{-}0 & - n_3 & \phantom{-}n_2 \\ \phantom{-}n_3 & \phantom{-}0 & -n_1 \\ -n_2 & \phantom{-}n_1 & \phantom{-}0 \end{bmatrix*} \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix*} ,
+&= \begin{bmatrix} \phantom{-}0 & - n_3 & \phantom{-}n_2 \\ \phantom{-}n_3 & \phantom{-}0 & -n_1 \\ -n_2 & \phantom{-}n_1 & \phantom{-}0 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix} ,
 \end{aligned}
 $$
 
 where $$\hat{\boldsymbol{i}}$$, $$\hat{\boldsymbol{j}}$$, and $$\hat{\boldsymbol{k}}$$ are unit vectors along $$x$$, $$y$$, and $$z$$ axes, respectively, so that
 
 $$
-J(\hat{\boldsymbol{n}} ) \equiv \begin{bmatrix*}[c] \phantom{-}0 & - n_3 & \phantom{-}n_2 \\ \phantom{-}n_3 & \phantom{-}0 & -n_1 \\ -n_2 & \phantom{-}n_1 & \phantom{-}0 \end{bmatrix*} .
+J(\hat{\boldsymbol{n}} ) \equiv \begin{bmatrix} \phantom{-}0 & - n_3 & \phantom{-}n_2 \\ \phantom{-}n_3 & \phantom{-}0 & -n_1 \\ -n_2 & \phantom{-}n_1 & \phantom{-}0 \end{bmatrix} .
 $$
 
 We see that
