@@ -1,7 +1,6 @@
 ---
 author:
 title: Analytical Solution for a Particle in a Velocity-Dependent Force Field
-permalink:/assets
 ---
 
 Introducing an integrating factor to solve a first-order linear differential equation, in the case of a  **vector** equation, also
