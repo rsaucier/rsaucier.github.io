@@ -365,7 +365,7 @@ $$
 \end{aligned}
 $$
 
-After a bit of algebra (see [paper]({{ site.url }} /assets/vel_dep_forces.pdf) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
+After a bit of algebra (see [paper](https://rsaucier.github.io/assets/vel_dep_forces.pdf) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
 
 $$
 \boxed{
