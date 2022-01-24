@@ -212,3 +212,135 @@ original cross product, c = -3 -5 -11
 now rotate c 120 deg about u:
 c is now = -11 -3 -5
 ```
+
+## Using the Rotation Class
+
+Similarly, the source code for the Rotation class is completely self-contained in the header file
+`Rotation.h`,
+which is listed and described in Appendix B. The program in Listing 2 provides some basic examples of usage.
+
+<figcaption class="caption">Listing 2. rtest.cpp</figcaption>
+
+```cpp
+// rtest.cpp
+
+#include "Rotation.h"
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <iomanip>
+using namespace va;
+
+int main( void ) {
+
+   // declare two unit vectors, u and v
+   Vector u = Vector( 1.5, 2.1, 3.2 ).unit(), v = Vector( 1.2, 3.5, -2.3 ).unit();
+   std::cout << "u        = " << u << std::endl;
+   std::cout << "v        = " << v << std::endl;
+   
+   // let R be the rotation specified by the vector cross product u ^ v
+   Rotation R( u, v );
+   
+   // show that R * u equals v
+   std::cout << "R * u    = " << R * u << std::endl;
+   
+   // interpolate a unit vector, w, halfway between u and v
+   Vector w = slerp( u, v, 0.5 );
+   std::cout << "Vector halfway between u and v = " << w << std::endl;
+   
+   // output angle between u and v
+   std::cout << "angle between u and v (deg) = " << deg( angle( u, v ) ) << std::endl;
+   
+   // output angle between u and w
+   std::cout << "angle between u and w (deg) = " << deg( angle( u, w ) ) << std::endl;
+   
+   // let Rinv be the inverse rotation
+   Rotation Rinv = inverse( R );
+   
+   // show that Rinv * v equals u
+   std::cout << "Rinv * v = " << Rinv * v << std::endl;
+   
+   Vector ihat( 1., 0., 0. ), jhat( 0., 1., 0. ), khat( 0., 0., 1. );
+   R = Rotation( ihat, jhat, khat, jhat,khat, ihat );
+   std::cout << "R = " << R << std::endl;
+   
+   sequence s = factor( R, ZYX );
+   std::cout << "yaw (deg )   = " << deg( s.first ) << std::endl;
+   std::cout << "pitch (deg ) = " << deg( s.second ) << std::endl;
+   std::cout << "roll (deg )  = " << deg( s.third ) << std::endl;
+   
+   R = Rotation( s.first, s.second, s.third, ZYX );
+   std::cout << "R = " << R << std::endl;
+   
+   s = factor( R, XYZ );
+   std::cout << "pitch (deg ) = " << deg( s.first ) << std::endl;
+   std::cout << "yaw (deg )   = " << deg( s.second ) << std::endl;
+   std::cout << "roll (deg )  = " << deg( s.third ) << std::endl;
+   
+   std::streamsize ss = std::cout.precision();
+   R = Rotation( s.first, s.second, s.third, XYZ );
+   std::cout << "R = " << R << std::endl;
+   
+   rng::Random rng;
+   R = Rotation( rng );
+   std::cout << "R = " << R << std::endl;
+   quaternion q = to_quaternion( R );
+   std::cout << "the quaternion for this rotation is" << std::endl;
+   std::cout << "q = " << q << std::endl;
+   R = Rotation( q );
+   std::cout << "R = " << R << std::endl;
+   matrix A = to_matrix( R );
+   std::cout << "the matrix for this rotation is" << std::endl;
+   std::cout << std::setprecision(6) << std::fixed << std::showpos;
+   std::cout << A << std::endl;
+   
+   std::cout << std::setprecision(ss) << std::noshowpos;
+   R = Rotation( A );
+   std::cout << "R = " << R << std::endl;
+   
+   u = normalize( Vector( 1., 1., 1. ) );
+   double th = rad( 120. );
+   R = Rotation( u, th );
+   std::cout << R << std::endl;
+   A = to_matrix( A );
+   std::cout << A << std::endl;
+   q = to_quaternion( R );
+   std::cout << q << std::endl;
+   
+   return EXIT_SUCCESS;
+}
+```
+Writing this to a file `rtest.cpp`, compiling and running it,
+```
+g++ -O2 -Wall -o rtest rtest.cpp -lm
+./rtest
+```
+produces the following output:
+<figcaption class="caption">rtest output</figcaption>
+```cpp
+u        = 0.364878 0.510829 0.778407
+v        = 0.275444 0.803378 -0.527934
+R * u    = 0.275444 0.803378 -0.527934
+Vector halfway between u and v = 0.431716 0.886061 0.168873
+angle between u and v (deg) = 84.264
+angle between u and w (deg) = 42.132
+Rinv * v = 0.364878 0.510829 0.778407
+R = 0.57735 0.57735 0.57735	120
+yaw (deg )   = -90
+pitch (deg ) = -180
+roll (deg )  = -90
+R = 0.57735 0.57735 0.57735	120
+pitch (deg ) = 45
+yaw (deg )   = 90
+roll (deg )  = 45
+R = 0.57735 0.57735 0.57735	120
+R = 0.338694 0.929155 0.148182	174.087
+the quaternion for this rotation is
+q = 0.0515815	0.338243 0.927918 0.147985
+R = 0.338694 0.929155 0.148182	174.087
+the matrix for this rotation is
+-0.765862	+0.612457	+0.195837
++0.642990	+0.727384	+0.239741
++0.004383	+0.309530	-0.950880
+R = 0.338694 0.929155 0.148182	174.086566
+```
