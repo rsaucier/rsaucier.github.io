@@ -6,6 +6,7 @@ description: > # this means to ignore newlines until "show_excerpts:"
   Short articles on physics and mathematics and documentation of three C++ classes:
   Vector.h and Rotation.h for performing vector algebra and rotations in 3D, while
   Random.h generates random number distributions suitable for Monte Carlo simulations.
+url: rsaucier.github.io
 
 show_excerpts: true # set to true to show excerpts on the homepage
 
