@@ -271,7 +271,7 @@ $$
 We rewrite this as[^3]
 
 $$
-\ddot{\boldsymbol{r}} + 2 A (t) \dot{\boldsymbol{r}} + B(t) \boldsymbol{r} = \boldsymbol{g}
+\ddot{\boldsymbol{r}} + 2 A (t) \dot{\boldsymbol{r}} + B(t) \boldsymbol{r} = \boldsymbol{g} \tag{6}
 $$
 
 where $$A(t)$$ and $$B(t)$$ are the matrices $$A(t) \equiv \Omega J(\hat{\boldsymbol{\omega}})$$ and $$B(t) \equiv \dot{\Omega} J(\hat{\boldsymbol{\omega}}) + \Omega^2 J^2(\hat{\boldsymbol{\omega}} )$$.
@@ -290,7 +290,7 @@ $$
 \begin{aligned}[t]
 \ddot{V} \boldsymbol{y} + 2 \dot{V} \dot{\boldsymbol{y}} + V \ddot{\boldsymbol{y}} + 2A ( \dot{V} \boldsymbol{y} + V \dot{\boldsymbol{y}} ) + B V \boldsymbol{y} &= \boldsymbol{g} \\
 V \ddot{\boldsymbol{y}}  + 2 ( \dot{V} + A V ) \dot{\boldsymbol{y}} + ( \ddot{V} + 2 A \dot{V} + B V ) \boldsymbol{y} &= \boldsymbol{g}
-\end{aligned}
+\end{aligned} \tag{7}
 $$
 
 And now we choose $$V$$ to eliminate the $$\dot{\boldsymbol{y}}$$ term:
@@ -311,7 +311,7 @@ $$
 \begin{aligned}[t]
 V \ddot{\boldsymbol{y}} + ( - \dot{A} V + A^2 V - 2 A^2 V+ BV ) \boldsymbol{y} &= \boldsymbol{g} \\
 V \ddot{\boldsymbol{y}} + ( B - A^2 - \dot{A} ) V \boldsymbol{y} &= \boldsymbol{g}
-\end{aligned}
+\end{aligned} \tag{8}
 $$
 
 Now, using the expressions for $$A$$ and $$B$$, we find that the coefficient of $$\boldsymbol{y}$$ also vanishes:
