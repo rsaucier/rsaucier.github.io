@@ -129,17 +129,13 @@ $$
 Integrating once more, the solution for the position is
 
 $$
-\begin{equation}
 \boldsymbol{r}(t) = \boldsymbol{r}_0 + \left ( \int_0^t e^{- J ( \hat{\boldsymbol{b}} )\omega \tau } d \tau \right ) \boldsymbol{v}_0 + \frac{\omega}{B} \left ( \int_0^t \int_0^\tau e^{-  J ( \hat{\boldsymbol{b}} ) \omega \xi} d\xi d\tau \right ) \boldsymbol{E} .
-\end{equation}
 $$
 
 Making use of eq. (3), this can be written as
 
 $$
-\begin{equation}
 \boldsymbol{r} (t) = \boldsymbol{r}_0 + \left ( \int_0^t R_{\hat{\boldsymbol{b}}} ( - \omega \tau ) \, d \tau \right ) \boldsymbol{v}_0 + \frac{\omega}{B} \left ( \int_0^t \int_0^\tau R_{\hat{\boldsymbol{b}}} ( - \omega \xi ) \, d\xi d\tau \right ) \boldsymbol{E} .
-\end{equation}
 $$
 
 Also from eq. (3),
@@ -160,7 +156,7 @@ $$
 \end{aligned}
 $$
 
-so that, we find (see the full [paper](assets/vel_dep_forces.pdf) for details)
+so that, we find (see the full [paper](https://rsaucier.github.io/assets/vel_dep_forces.pdf) for details)
 
 $$
  \boxed{\begin{aligned}[t]
@@ -369,7 +365,7 @@ $$
 \end{aligned}
 $$
 
-After a bit of algebra (see [paper](assets/vel_dep_forces.pdf) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
+After a bit of algebra (see [paper]({{ site.url }} /assets/vel_dep_forces.pdf) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
 
 $$
 \boxed{
