@@ -156,7 +156,7 @@ $$
 \end{aligned}
 $$
 
-so that, we find (see the full [paper](https://rsaucier.github.io/assets/vel_dep_forces.pdf) for details)
+so that, we find (see [paper]({% link /assets/vel_dep_forces.pdf %}) for for details)
 
 $$
  \boxed{\begin{aligned}[t]
@@ -365,7 +365,7 @@ $$
 \end{aligned}
 $$
 
-After a bit of algebra (see [paper](https://rsaucier.github.io/assets/vel_dep_forces.pdf) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
+After a bit of algebra (see [paper]({% link /assets/vel_dep_forces.pdf %}) for details), and using $$J^3 = -J$$ and $$J^4 = -J^2$$, the final formula is
 
 $$
 \boxed{
