@@ -61,8 +61,8 @@ The Rotation and Vector classes provide C++ support for all these operations. No
 ## Using the Vector Class
 
 The source code for the Vector class is completely self-contained in the header file
-`Vector.h`
-which is listed and described in Appendix A. The program in Listing 1 provides some examples of how one might use the Vector class.
+[`Vector.h`](https://github.com/rsaucier/Vector).
+The program in Listing 1 provides some examples of how one might use the Vector class.
 <figcaption class="caption">Listing 1. vtest.cpp</figcaption>
 ```cpp
 // vtest.cpp: simple program to demonstrate basic usage of Vector class
