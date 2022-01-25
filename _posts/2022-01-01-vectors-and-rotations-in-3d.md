@@ -56,7 +56,7 @@ Quaternions are also very convenient and efficient for describing smooth rotatio
 
 Sometimes we need to relate 2 different orientations and find the rotation that will transform from one to the other. This is called the absolute orientation problem and Appendix H provides an exact solution to this problem.
 
-The Rotation and Vector classes provide C++ support for all these operations. No libraries are required and there is nothing to build; one merely needs to include the header file to make use of the class. (The Rotation class includes the Vector class, so one only needs to include `Rotation.h` to also make use of the Vector class.)
+The Rotation and Vector classes provide C++ support for all these operations. No libraries are required and there is nothing to build; one merely needs to include the header file to make use of the class. (The Rotation class includes the Vector class, so one only needs to include [`Rotation.h`](https://github.com/rsaucier/Rotation) to also make use of the Vector class.)
 
 ## Using the Vector Class
 
@@ -211,7 +211,7 @@ c is now = -11 -3 -5
 ## Using the Rotation Class
 
 Similarly, the source code for the Rotation class is completely self-contained in the header file
-`Rotation.h`,
+[`Rotation.h`](https://github.com/rsaucier/Rotation),
 which is listed and described in Appendix B. The program in Listing 2 provides some basic examples of usage.
 
 <figcaption class="caption">Listing 2. rtest.cpp</figcaption>
@@ -342,6 +342,6 @@ R = 0.338694 0.929155 0.148182	174.086566
 
 ## Usage
 
-To make use of the Vector class, simply include the `Vector.h` class file,
+To make use of the Vector class, simply include the [`Vector.h`](https://github.com/rsaucier/Vector)class file,
 and to make use of both the Vector and Rotation classes,
-simply include the `Rotation.h` class file in your C++ program.
+simply include the [`Rotation.h`](https://github.com/rsaucier/Rotation) class file in your C++ program.
