@@ -18,15 +18,13 @@ programmer the ability to generate random number distributions as if they were
 native types in the C++ language.
 There are two broad aspects to this class:
 
-- **Random Number Generator**
-
+- **Random Number Generator**<br />
 The class provides a number of generators to choose from. These are the
 engines for generating the pseudorandom numbers. Each engine will deliver
 32-bit and 64-bit integers as well as floating point numbers between 0 and 1.
 Many of the generators also have jump capabilities.
  
-- **Random Number Distribution**
-
+- **Random Number Distribution**<br />
 Independently of whichever generator is selected, the class provides many different
 distributions to choose from. The class currently contains 27 continuous
 distributions, 9 discrete distributions, distributions based on empirical data,
@@ -66,5 +64,4 @@ the header file in order to make use of the class.
 **Links**
 
 - [Random document]({% link /assets/random.pdf %})
-
 - [Random repository](https://github.com/rsaucier/Random)
