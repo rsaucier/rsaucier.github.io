@@ -47,7 +47,7 @@ A [Vector reference sheet]({% link /assets/vector_ref.pdf %}) as well as a
 
 
 
-Rotations only require an axis and an angle of rotation&mdash;which is how they are stored&mdash;and may be specified in a number of convenient ways. We also provide methods for converting from the internal representation to the equivalent quaternion and rotation matrix representation. Quaternion algebra is summarized in [Appendix C]({% link /assets/rotation.pdf#page=28 %}), which then provides a coordinate-free formula for the rotation of a vector.
+Rotations only require an axis and an angle of rotation&mdash;which is how they are stored&mdash;and may be specified in a number of convenient ways. We also provide methods for converting from the internal representation to the equivalent quaternion and rotation matrix representation. Quaternion algebra is summarized in [Appendix C]({% link /assets/rotation.pdf %}), which then provides a coordinate-free formula for the rotation of a vector.
 
 It is also useful to describe rotations as a sequence of 3 standard rotations (Euler angles or yaw, pitch, and roll), and Appendix D shows that a rotation sequence about body axes is equivalent to the same rotation sequence applied in reverse order about fixed axes. There are a total of 12 rotation sequences that can be used to describe the orientation of a vector. In Appendix E we provide formulas1 for factoring an arbitrary rotation into each of these rotation sequences.
 Rotations are commonly described with rotation matrices. Appendix F provides formulas and source code for converting between our descriptions of rotations, the quaternion representation, and the rotation matrix.
