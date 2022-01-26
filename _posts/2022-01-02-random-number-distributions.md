@@ -7,7 +7,7 @@ katex: true
 
 This document describes Random, a C++ class for generating pseudorandom number distributions.
 This class gives the programmer the ability to generate pseudorandom number distributions as if they were native types in the C++ language. The class is self-contained in a single header file
-[`Random.h`) so that a C++ programmer only has to include the header file in order to make use of the code.
+(`Random.h`) so that a C++ programmer only has to include the header file in order to make use of the code.
 Examples and a reference sheet are provided to serve as guidance in using the code.
 
 ## Summary
