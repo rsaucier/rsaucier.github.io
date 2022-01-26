@@ -7,7 +7,7 @@ katex: true
 
 This document describes Random, a C++ class for generating pseudorandom number distributions.
 This class gives the programmer the ability to generate pseudorandom number distributions as if they were native types in the C++ language. The class is self-contained in a single header file
-(`Random.h`) so that a C++ programmer only has to include the header file in order to make use of the code.
+(Random.h) so that a C++ programmer only has to include the header file in order to make use of the code.
 Examples and a reference sheet are provided to serve as guidance in using the code.
 
 ## Summary
@@ -18,13 +18,15 @@ programmer the ability to generate random number distributions as if they were
 native types in the C++ language.
 There are two broad aspects to this class:
 
-- Random Number Generator
+- **Random Number Generator**
+
 The class provides a number of generators to choose from. These are the
 engines for generating the pseudorandom numbers. Each engine will deliver
 32-bit and 64-bit integers as well as floating point numbers between 0 and 1.
 Many of the generators also have jump capabilities.
  
-- Random Number Distribution
+- **Random Number Distribution**
+
 Independently of whichever generator is selected, the class provides many different
 distributions to choose from. The class currently contains 27 continuous
 distributions, 9 discrete distributions, distributions based on empirical data,
@@ -60,3 +62,9 @@ int main( void ) {
 
 No libraries are required and there is nothing to build; one merely needs to include
 the header file in order to make use of the class.
+
+**Links**
+
+- [Random document]({% link /assets/random.pdf %})
+
+- [Random repository](https://github.com/rsaucier/Random)
