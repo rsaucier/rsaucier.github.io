@@ -42,8 +42,8 @@ $$
 \boldsymbol{c}
 $$.
 <!-- A reference sheet for each class is made available in Appendix A and Appendix B. -->
-A [Vector reference sheet]({% link /assets/Vector.pdf %}) as well as a
-[Rotation reference sheet]({% link /assets/Rotation.pdf %}) are also available.
+A [Vector reference sheet]({% link /assets/vector_ref.pdf %}) as well as a
+[Rotation reference sheet]({% link /assets/rotation_ref.pdf %}) are also available.
 
 
 
