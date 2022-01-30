@@ -9,3 +9,10 @@ permalink: /about/
 - [Rotation](https://github.com/rsaucier/Rotation)
 - [Random](https://github.com/rsaucier/Random)
 - [Vector](https://github.com/rsaucier/Vector)
+
+**Papers**
+
+- [Rotation]({% link /assets/rotation.pdf %})
+- [Random]({% link /assets/random.pdf %})
+- [Velocity-Dependent Forces]({% link /assets/vel_dep_forces.pdf %})
+- [Location of L2]({% link /assets/l2.pdf %})
