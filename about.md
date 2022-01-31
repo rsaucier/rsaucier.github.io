@@ -16,3 +16,4 @@ permalink: /about/
 - [Random]({% link /assets/random.pdf %})
 - [Velocity-Dependent Forces]({% link /assets/vel_dep_forces.pdf %})
 - [Location of L2]({% link /assets/l2.pdf %})
+- [Problems & Solutions from College Algebra]({% link /assets/college_algebra.pdf %})
