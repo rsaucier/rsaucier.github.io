@@ -13,7 +13,7 @@ permalink: /about/
 **Papers**
 
 - [Shape Factor of a Randomly Oriented Cylinder]({% link /assets/sf.pdf %})
-- [Analytical Approximations of Projectile Motion]({% link /assets/propjectile.pdf %})
+- [Analytical Approximations of Projectile Motion]({% link /assets/projectile.pdf %})
 - [Rotation]({% link /assets/rotation.pdf %})
 - [Random]({% link /assets/random.pdf %})
 - [Velocity-Dependent Forces]({% link /assets/vel_dep_forces.pdf %})
