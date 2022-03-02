@@ -21,7 +21,7 @@ Let us transform this formula from a vector equation to a matrix equation.
 Define the matrix operator $$J(\hat{\boldsymbol{n}})$$ as follows.
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 J(\hat{\boldsymbol{n}} ) \boldsymbol{v} \equiv \hat{\boldsymbol{n}} \boldsymbol{\times} \boldsymbol{v} &= \begin{vmatrix} \hat{\boldsymbol{i}} & \hat{\boldsymbol{j}} & \hat{\boldsymbol{k}} \\ n_1 & n_2 & n_3 \\ v_1 & v_2 & v_3 \end{vmatrix} =
 \hat{\boldsymbol{i}} ( n_2 v_3 - n_3 v_2 ) + \hat{\boldsymbol{j}} ( n_3 v_1 -  n_1 v_3 ) + \hat{\boldsymbol{k}} ( n_1 v_2 - n_2 v_1 ) \\
 &= \begin{bmatrix} \phantom{-}0 & - n_3 & \phantom{-}n_2 \\ \phantom{-}n_3 & \phantom{-}0 & -n_1 \\ -n_2 & \phantom{-}n_1 & \phantom{-}0 \end{bmatrix} \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix} ,
@@ -69,7 +69,7 @@ although we will not need the explicit form of either $$J$$ or $$J^2$$.
 Now, since the exponential of a matrix is defined by its power series, and making use of eq. (2), we have
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 e^{J \theta} &= I + J \theta + \frac{(J\theta)^2}{2!} + \frac{(J\theta)^3}{3!} + \frac{(J\theta)^4}{4!} + \frac{(J\theta)^5}{5!} + \frac{(J\theta)^6}{6!} + \cdots \\
 &= I + J \left ( \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} \mp \cdots \right ) + J^2 \left ( \frac{\theta^2}{2!} - \frac{\theta^4}{4!} + \frac{\theta^6}{6!} \mp \cdots \right ) \\
 &= I + J \sin \theta + J^2 ( 1 - \cos \theta )
@@ -141,7 +141,7 @@ $$
 Also from eq. (3),
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \int_0^t R_{\hat{\boldsymbol{b}}} (- \omega \tau) d\tau
 &= t + \left ( \frac{\cos \omega t - 1}{\omega} \right ) J (\hat{\boldsymbol{b}}) + \left ( t - \frac{\sin \omega t}{\omega} \right ) J^2 (\hat{\boldsymbol{b}}) ,
 \end{aligned}
@@ -150,7 +150,7 @@ $$
 and
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \int_0^t \int_0^\tau R_{\hat{\boldsymbol{b}}} ( - \omega \xi) d\xi d\tau 
 &= \frac{t^2}{2} + \left ( \frac{\sin \omega t}{\omega^2} - \frac{t}{\omega} \right ) J(\hat{\boldsymbol{b}}) + \left ( \frac{t^2}{2} + \frac{\cos \omega t - 1}{\omega^2} \right ) J^2(\hat{\boldsymbol{b}}) ,
 \end{aligned}
@@ -159,7 +159,7 @@ $$
 so that, we find (see [paper]({% link /assets/vel_dep_forces.pdf %}) for for details)
 
 $$
- \boxed{\begin{aligned}[t]
+ \boxed{\begin{aligned}
 \boldsymbol{r}(t) &= \boldsymbol{r}_0 + \boldsymbol{v}_0 t + \frac{\omega t^2}{2 B} \hat{\boldsymbol{b}} ( \hat{\boldsymbol{b}} \cdot \boldsymbol{E} ) +
  \left ( \frac{1 - \cos \omega t}{\omega}\right ) \left ( -\hat{\boldsymbol{b}} \boldsymbol{\times} \boldsymbol{v}_0 - \frac{1}{B}  \hat{\boldsymbol{b}} \boldsymbol{\times} ( \hat{\boldsymbol{b}} \boldsymbol{\times} \boldsymbol{E} )  \right ) \\
  & \hspace{1em} + \left ( t - \frac{\sin \omega t}{\omega} \right ) \left (  \hat{\boldsymbol{b}} \boldsymbol{\times} ( \hat{\boldsymbol{b}} \boldsymbol{\times} \boldsymbol{v}_0 )  - \frac{1}{B} ( \hat{\boldsymbol{b}} \boldsymbol{\times} \boldsymbol{E} ) \right ) . \tag{4}
@@ -208,7 +208,7 @@ $$
 and the solution for the position vector is
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \boldsymbol{r}(t) &= \boldsymbol{r}_0 + \left ( \int_0^t e^{- 2J ( \hat{\boldsymbol{\omega}} ) \Omega \tau } d \tau \right ) \boldsymbol{v}_0 + \left ( \int_0^t \int_0^\tau e^{- 2 J ( \hat{\boldsymbol{\omega}} ) \Omega \xi} d\xi d\tau \right ) \boldsymbol{g} \\
 &= \boldsymbol{r}_0 + \left ( \int_0^t R_{\hat{\boldsymbol{\omega}}} ( - 2 \Omega \tau ) \, d \tau \right ) \boldsymbol{v}_0 + \left ( \int_0^t \int_0^\tau R_{\hat{\boldsymbol{\omega}}} ( - 2 \Omega \xi ) \, d\xi d\tau \right ) \boldsymbol{g} .
 \end{aligned}
@@ -217,7 +217,7 @@ $$
 Putting everything together, we get
 
 $$
-\boxed{\begin{aligned}[t]
+\boxed{\begin{aligned}
 \boldsymbol{r}(t) &= \boldsymbol{r}_0 + \boldsymbol{v}_0 t + \frac{1}{2} \boldsymbol{g} t^2 + \frac{1}{2} \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{g} ) t^2 \\
 & \hspace{1em} - \left ( \frac{1 - \cos 2 \Omega t}{2 \Omega} \right ) \left ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{v}_0 + \frac{1}{2 \Omega} \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{g} ) \right ) \\
 & \hspace{1em} - \left ( t - \frac{\sin 2 \Omega t}{2 \Omega} \right ) \left ( \frac{1}{2 \Omega} \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{g} - \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{v}_0 ) \right )
@@ -238,7 +238,7 @@ $$
 Applied to the position vector, we have
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \dot{\boldsymbol{r}}_\text{fixed} &= \left [  \left ( \frac{d}{dt} \right )_\text{rotating} + \boldsymbol{\Omega} \, \boldsymbol{\times} \right ] \boldsymbol{r} = \dot{\boldsymbol{r}} + \boldsymbol{\Omega} \boldsymbol{\times} \boldsymbol{r} \\
 \ddot{\boldsymbol{r}}_\text{fixed} &= \left [  \left ( \frac{d}{dt} \right )_\text{rotating} + \boldsymbol{\Omega} \, \boldsymbol{\times} \right ] ( \dot{\boldsymbol{r}} + \boldsymbol{\Omega} \boldsymbol{\times} \boldsymbol{r} ) \\
 &= \left [  \left ( \frac{d}{dt} \right )_\text{rotating} + \boldsymbol{\Omega} \boldsymbol{\times} \right ] \dot{\boldsymbol{r}} + \left [  \left ( \frac{d}{dt} \right )_\text{rotating} + \boldsymbol{\Omega} \, \boldsymbol{\times} \right ] ( \boldsymbol{\Omega} \, \boldsymbol{\times} \boldsymbol{r} ) \\
@@ -262,7 +262,7 @@ $$
 Thus, the equation of motion in the *rotating frame* is
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \ddot{\boldsymbol{r}} + 2 \boldsymbol{\Omega} \boldsymbol{\times} \dot{\boldsymbol{r}} + \dot{\boldsymbol{\Omega}} \boldsymbol{\times} \boldsymbol{r} +  \boldsymbol{\Omega} \boldsymbol{\times} ( \boldsymbol{\Omega} \boldsymbol{\times} \boldsymbol{r} ) &= \boldsymbol{g} \\
 \ddot{\boldsymbol{r}} + 2 \Omega J(\hat{\boldsymbol{\omega}}) \dot{\boldsymbol{r}} +  [ \dot{\Omega} J(\hat{\boldsymbol{\omega}}) + \Omega^2 J^2(\hat{\boldsymbol{\omega}} )  ] \boldsymbol{r} &= \boldsymbol{g}
 \end{aligned}
@@ -278,7 +278,7 @@ where $$A(t)$$ and $$B(t)$$ are the matrices $$A(t) \equiv \Omega J(\hat{\boldsy
 Let $$\boldsymbol{r} = V(t) \, \boldsymbol{y}$$, then
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \dot{\boldsymbol{r}} &= \dot{V} \boldsymbol{y} + V \dot{\boldsymbol{y}} \\
 \ddot{\boldsymbol{r}} &= \ddot{V} \boldsymbol{y} + 2 \dot{V} \dot{\boldsymbol{y}} + V \ddot{\boldsymbol{y}} ,
 \end{aligned}
@@ -287,7 +287,7 @@ $$
 which transforms eq. (6) into
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \ddot{V} \boldsymbol{y} + 2 \dot{V} \dot{\boldsymbol{y}} + V \ddot{\boldsymbol{y}} + 2A ( \dot{V} \boldsymbol{y} + V \dot{\boldsymbol{y}} ) + B V \boldsymbol{y} &= \boldsymbol{g} \\
 V \ddot{\boldsymbol{y}}  + 2 ( \dot{V} + A V ) \dot{\boldsymbol{y}} + ( \ddot{V} + 2 A \dot{V} + B V ) \boldsymbol{y} &= \boldsymbol{g}
 \end{aligned} \tag{7}
@@ -308,7 +308,7 @@ $$
 so that eq. (7) becomes
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 V \ddot{\boldsymbol{y}} + ( - \dot{A} V + A^2 V - 2 A^2 V+ BV ) \boldsymbol{y} &= \boldsymbol{g} \\
 V \ddot{\boldsymbol{y}} + ( B - A^2 - \dot{A} ) V \boldsymbol{y} &= \boldsymbol{g}
 \end{aligned} \tag{8}
@@ -317,7 +317,7 @@ $$
 Now, using the expressions for $$A$$ and $$B$$, we find that the coefficient of $$\boldsymbol{y}$$ also vanishes:
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 B - A^2 - \dot{A} &= \dot{\Omega} J(\hat{\boldsymbol{\omega}}) + \Omega^2 J^2(\hat{\boldsymbol{\omega}}) - \Omega^2 J^2(\hat{\boldsymbol{\omega}})  - \dot{\Omega} J(\hat{\boldsymbol{\omega}}) = 0
 \end{aligned}
 $$
@@ -349,7 +349,7 @@ $$
 Now, $$\boldsymbol{r}_0 = \boldsymbol{y}(0)$$ and $$\boldsymbol{v}_0 \equiv \dot{r}_0 = \dot{\boldsymbol{y}}(0) - \Omega J \boldsymbol{y}(0)$$, so that we can make the replacements
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \boldsymbol{y}(0) &\implies \boldsymbol{r}_0 \\
 \dot{\boldsymbol{y}}(0) &\implies \boldsymbol{v}_0 + \Omega J \boldsymbol{r}_0
 \end{aligned}
@@ -359,7 +359,7 @@ Also, $$\boldsymbol{r}(t)$$ and $$\boldsymbol{y}(t)$$ are related by the transfo
 Thus, we have
 
 $$
-\begin{aligned}[t]
+\begin{aligned}
 \boldsymbol{r}(t) &= e^{-J \Omega t} \left [ \boldsymbol{r}_0 + \boldsymbol{v}_0 t + \Omega J \boldsymbol{r}_0 t + \frac{1}{2} \boldsymbol{g}t^2 + \frac{\Omega t - \sin \Omega t}{\Omega^2} J \boldsymbol{g} + \frac{\frac{1}{2} \Omega^2t^2 + \cos \Omega t - 1}{\Omega^2} J^2 \boldsymbol{g} \right ] \\
 &= e^{-J \Omega t} \left \{ \boldsymbol{r}_0 + \boldsymbol{v}_0 t + \frac{1}{2} \boldsymbol{g} t^2 - \frac{1}{\Omega^2} \underbrace{\left [ I + \sin \Omega t J + ( 1 - \cos \Omega t ) J^2 \right ]}_{e^{J \Omega t}} \boldsymbol{g} + \Omega J \boldsymbol{r}_0 t + \frac{1}{\Omega^2} \left [ I + \Omega t J + \frac{1}{2} \Omega^2 t^2 J^2 \right ] \boldsymbol{g} \right \}
 \end{aligned}
@@ -369,7 +369,7 @@ After a bit of algebra (see [paper]({% link /assets/vel_dep_forces.pdf %}) for d
 
 $$
 \boxed{
-\begin{aligned}[t]
+\begin{aligned}
 \boldsymbol{r}(t) = \hspace{0.25em} &\boldsymbol{r}_0 + \boldsymbol{v}_0 t + \frac{1}{2} \boldsymbol{g} t^2 + \hat{\boldsymbol{\omega}} \boldsymbol{\times} [ \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \boldsymbol{r}_0^* + \boldsymbol{v}_0 t + \frac{1}{2} \boldsymbol{g} t^2 ) ] 
 -\sin \Omega t ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{r}_0^* ) - \cos \Omega t [ \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{r}_0^* ) ] \\
 &- \Omega t \sin \Omega t \left [ \hat{\boldsymbol{\omega}} \boldsymbol{\times} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{r}_0^* ) + \frac{1}{\Omega} ( \hat{\boldsymbol{\omega}} \boldsymbol{\times} \boldsymbol{v}_0 ) \right ] 
