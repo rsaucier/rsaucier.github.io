@@ -39,21 +39,20 @@ standard deviation 1) using the jkiss generator, we would write the following co
 
 {% highlight cpp %}
 #include "Random.h"
-#include <iostream>
-#include <cstdlib>
 
 int main( void ) {
 
    // create a new generator using jkiss as the engine
    Generator<uint32_t> *rng = new JKISS::jkiss;
    
-   // create a distribution object and initialize it to use this generator
-   dist::Distribution<uint32_t> rnd( rng );
+   // create an rnd object and initialize it to use this generator
+   rnd::Random<uint32_t> rnd( rng );
    
-   // output 1000 normally-distributed pseudorandom numbers
+   // output 1000 normally distributed pseudorandom numbers
    for ( int i = 0; i < 1000; i++ )
       std::cout << rnd.normal() << std::endl; 
 
+   delete rng;
    return 0;
 }
 {% endhighlight %}
